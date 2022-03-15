@@ -1,0 +1,8 @@
+{
+  "name": "Mediscan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "eaf0c9ea"
+}

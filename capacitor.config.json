@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Mediscan",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
