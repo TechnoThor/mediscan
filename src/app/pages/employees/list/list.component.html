@@ -1,0 +1,11 @@
+<div class="div-card">
+  <h1 class="header-text" fxLayoutAlign="center center">Ezen az oldalon megtekintheti a rendszerben lévő műköröm építőket és a hozzájuk tartozó véleményeket</h1>
+  <mat-card fxLayout fxLayoutGap="20px" fxLayout="column" fxLayoutAlign="center center">
+    <h1>Válasszon egy műkörömépítőt:</h1>
+    <mat-form-field appearance="fill">
+      <mat-select (selectionChange)="reload()" [(ngModel)]="chosenEmployee">
+        <mat-option *ngFor="let obj of employeeObjectInput" [value]="obj">{{obj.name}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+</div>
