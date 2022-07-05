@@ -2,5 +2,15 @@
 	"appId": "io.ionic.starter",
 	"appName": "Mediscan",
 	"webDir": "www",
-	"bundledWebRuntime": false
+	"bundledWebRuntime": false,
+	"plugins": {
+		"BluetoothLe": {
+		  "displayStrings": {
+			"scanning": "Scennelés...",
+			"cancel": "Megszakítva",
+			"availableDevices": "Elérhető eszközök",
+			"noDeviceFound": "Nem található eszköz"
+		  }
+		}
+	  }
 }
