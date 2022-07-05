@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { UntypedFormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
 import { AuthService } from '../../shared/services/auth.service';
@@ -12,8 +12,8 @@ import { FakeLoadingService } from '../../shared/services/fake-loading.service';
 })
 export class LoginComponent implements OnInit, OnDestroy {
 
-  email = new FormControl('');
-  password = new FormControl('');
+  email = new UntypedFormControl('');
+  password = new UntypedFormControl('');
 
   loadingSubscription?: Subscription;
   loadingObservation?: Observable<boolean>;

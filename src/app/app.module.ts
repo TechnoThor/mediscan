@@ -12,16 +12,15 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { environment } from '../environments/environment';
 import { AuthService } from "./shared/services/auth.service";
 
-@NgModule({imports: [
-  AngularFireModule.initializeApp(environment.firebase),
-  AngularFireAuthModule,
-  AngularFirestoreModule,
-  AngularFireStorageModule,
-  AngularFireDatabaseModule,
-  BrowserModule, IonicModule.forRoot(), AppRoutingModule
-],  
-  declarations: [AppComponent],
-  entryComponents: [],
-  providers: [AuthService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
-  bootstrap: [AppComponent]})
+@NgModule({ imports: [
+        AngularFireModule.initializeApp(environment.firebase),
+        AngularFireAuthModule,
+        AngularFirestoreModule,
+        AngularFireStorageModule,
+        AngularFireDatabaseModule,
+        BrowserModule, IonicModule.forRoot(), AppRoutingModule
+    ],
+    declarations: [AppComponent],
+    providers: [AuthService, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    bootstrap: [AppComponent] })
 export class AppModule {}

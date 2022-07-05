@@ -1,5 +1,5 @@
 import {Component, Input, OnChanges, OnInit} from '@angular/core';
-import {FormBuilder, Validators} from '@angular/forms';
+import {UntypedFormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
 import {Employee} from '../../../shared/models/Employee';
 import {Comment} from '../../../shared/models/Comment';
@@ -33,7 +33,7 @@ export class ViewerComponent implements OnInit, OnChanges {
 
   displayedColumns: string[] = ['actions', 'username', 'comment', 'date'];
 
-  constructor(private fb: FormBuilder,
+  constructor(private fb: UntypedFormBuilder,
               private router: Router,
               private galleryService: EmployeesService,
               private commentService: CommentService,

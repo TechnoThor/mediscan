@@ -1,6 +1,6 @@
 import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 import { AuthService } from '../../shared/services/auth.service';
 import { User } from '../../shared/models/User';
 import { UserService } from '../../shared/services/user.service';
@@ -13,13 +13,13 @@ import {Router} from "@angular/router";
 })
 export class SignupComponent implements OnInit {
 
-  signUpForm = new FormGroup({
-    email: new FormControl(''),
-    password: new FormControl(''),
-    rePassword: new FormControl(''),
-    name: new FormGroup({
-      firstname: new FormControl(''),
-      lastname: new FormControl('')
+  signUpForm = new UntypedFormGroup({
+    email: new UntypedFormControl(''),
+    password: new UntypedFormControl(''),
+    rePassword: new UntypedFormControl(''),
+    name: new UntypedFormGroup({
+      firstname: new UntypedFormControl(''),
+      lastname: new UntypedFormControl('')
     })
   });
 
