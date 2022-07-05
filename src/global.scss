@@ -24,3 +24,14 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+#background-content,
+.main_component,
+main{
+  background-color: #93bfff !important;
+}
+
+.main_component {
+  height: 100vh;
+  align-items: center;
+}

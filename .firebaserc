@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "mediscan-24e67": {
+      "hosting": {
+        "app": [
+          "mediscan-24e67"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "mediscan-24e67"
+  }
+}

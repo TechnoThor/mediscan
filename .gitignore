@@ -31,3 +31,8 @@ npm-debug.log*
 /plugins
 /www
 andorid
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
