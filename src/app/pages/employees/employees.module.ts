@@ -13,8 +13,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatTableModule} from "@angular/material/table";
 import { DateFormatPipe } from '../../shared/pipes/date-format.pipe';
 
 
@@ -37,8 +35,6 @@ import { DateFormatPipe } from '../../shared/pipes/date-format.pipe';
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
-    FlexLayoutModule,
-    MatTableModule,
   ]
 })
 export class EmployeesModule { }

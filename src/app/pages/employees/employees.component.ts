@@ -18,7 +18,7 @@ export class EmployeesComponent implements OnInit {
     this.galleryService.loadGalleryMeta('__credits.json').subscribe((data: Array<Employee>) => {
       console.log(data);
       this.employeeObject = data;
-    })
+    });
   }
 
   loadEmployee(employeeObject: Employee) {
