@@ -59,8 +59,14 @@ export class AppComponent implements AfterViewInit{
     }
   }
 
-  logout(asd?: boolean) {
+  logout() {
+    localStorage.removeItem('user');
     this.authService.logout();
+    this.goToPage('login');
+  }
+
+  goToPage(pageName: string){
+    this.router.navigate([`${pageName}`]);
   }
 
   ngAfterViewInit(): void {

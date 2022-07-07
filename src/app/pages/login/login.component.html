@@ -10,9 +10,9 @@
     <mat-form-field>
         <mat-label for="password">Jelszó: </mat-label><input matInput type="password" [formControl]="password" />
     </mat-form-field>
-    <span>
+  <mat-error *ngIf="error">{{error}}</mat-error>
+  <span>
         <span><button mat-raised-button color="primary" (click)="login()">Belépés</button></span>
         <span><button mat-raised-button color="primary" [routerLink]="'/signup'">Regisztráció</button></span>
     </span>
-    <mat-error *ngIf="error">{{error}}</mat-error>
 </div>

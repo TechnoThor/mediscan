@@ -5,6 +5,7 @@ import {FormsModule} from '@angular/forms';
 import {ScannerRoutingModule} from './scanner-routing.module';
 import {ScannerComponent} from './scanner.component';
 import {MatButtonModule} from '@angular/material/button';
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   imports: [
@@ -13,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
     FormsModule,
     ScannerRoutingModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
   ],
   declarations: [ScannerComponent]
 })

@@ -22,9 +22,9 @@ export class AuthGuard implements CanActivate {
 
       if (user && route.url[0].path !== 'login' && route.url[0].path !== 'signup') {
         return true;
-      } else if (!user && (route.url[0].path === 'login' || route.url[0].path === 'signup')) {
+      } else if (!user && (route.url[0].path === 'login' || route.url[0].path === 'signup' || route.url[0].path === 'welcome')) {
         return true;
-      } else if (!user && (route.url[0].path !== 'login' && route.url[0].path !== 'signup')) {
+      } else if (!user && (route.url[0].path !== 'login' && route.url[0].path !== 'signup' && route.url[0].path !== 'welcome')) {
         this.router.navigate(['/login']);
         return true;
       }else if (user && (route.url[0].path === 'login' || route.url[0].path === 'signup')) {

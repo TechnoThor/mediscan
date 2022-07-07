@@ -23,7 +23,7 @@ export class SignupComponent implements OnInit {
     })
   });
 
-  loading: boolean = false;
+  loading = false;
   error: any;
 
   constructor(private router: Router, private location: Location, private authService: AuthService, private userService: UserService) { }
@@ -39,11 +39,6 @@ export class SignupComponent implements OnInit {
       const user: User = {
         id: cred.user?.uid as string,
         email: this.signUpForm.get('email')?.value,
-        username: this.signUpForm.get('email')?.value.split('@')[0],
-        name: {
-          firstname: this.signUpForm.get('name.firstname')?.value,
-          lastname: this.signUpForm.get('name.lastname')?.value
-        }
       };
       this.userService.create(user).then(_ => {
         console.log('User added successfully.');
@@ -54,7 +49,7 @@ export class SignupComponent implements OnInit {
         console.error(error);
         this.loading = false;
         this.setError(true);
-      })
+      });
     }).catch(error => {
       console.error(error);
       this.loading = false;
@@ -64,14 +59,14 @@ export class SignupComponent implements OnInit {
 
   setError(isError: boolean): void {
     if(isError) {
-      this.error = "Nem megfelelő adatok!";
+      this.error = 'Nem megfelelő adatok!';
     } else {
       this.error = null;
     }
   }
 
-  goBack() {
-    this.location.back();
+  goToPage(pageName: string){
+    this.router.navigate([`${pageName}`]);
   }
 
 }

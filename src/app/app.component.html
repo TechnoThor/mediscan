@@ -1,5 +1,13 @@
 <ion-app>
-  <ion-header>
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="ion-text-center">
+      <ion-title>Mediscan</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <router-outlet></router-outlet>
+  </ion-content>
+  <ion-footer>
     <ion-grid>
       <ion-row>
         <ion-col class="ion-margin-auto ion-text-start">
@@ -14,6 +22,11 @@
                     [ngClass]="{ 'selected' : page==='scanner' }">
               <mat-icon>sensor_occupied</mat-icon>
               <span>Mérés</span>
+            </button>
+            <button *ngIf="loggedInUser" routerLink="/main" mat-menu-item
+                    [ngClass]="{ 'selected' : page==='main' }">
+              <mat-icon>list_alt</mat-icon>
+              <span>Mérési archív</span>
             </button>
             <button *ngIf="!loggedInUser" routerLink="/signup" mat-menu-item
                     [ngClass]="{ 'selected' : page==='signup' }">
@@ -33,13 +46,5 @@
         </ion-col>
       </ion-row>
     </ion-grid>
-  </ion-header>
-  <ion-content>
-    <router-outlet></router-outlet>
-  </ion-content>
-  <ion-footer class="ion-no-border">
-    <ion-toolbar>
-      <ion-title>Footer - No Border</ion-title>
-    </ion-toolbar>
   </ion-footer>
 </ion-app>
